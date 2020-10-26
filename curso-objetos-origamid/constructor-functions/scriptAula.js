@@ -1,46 +1,64 @@
-var videoGames = ['Switch', 'Ps4', 'Xbox', '3DS'];
-
-for (var i = 0; i < videoGames.length; i++) {
-    console.log(videoGames[i]);
-    if (videoGames[i] === 'Ps4') {
-        break;
-    }
+function Carro(marcaAtribuida, precoAtribuido) {
+    this.marca = marcaAtribuida;
+    this.preco = precoAtribuido;
 }
 
-var videoGames1 = ['Switch', 'Ps4', 'Xbox', '3DS'];
-videoGames1.forEach(function(games) {
-    console.log(games);
-});
+const honda = new Carro('Honda', 5000);
+console.log(honda)
 
-var frutas = ['Banana', 'Pera', 'Maçã', 'Abacaxi', 'Uva'];
-frutas.forEach(function(fruta, index, array) {
-    frutas.pop();
-    console.log(fruta, index, array);
-});
-/*
-videoGames.pop();
-var ultimoItem = videoGames.pop('3DS')
+const fiat = new Carro('Fiat', 2000);
+console.log(fiat)
 
-videoGames.push("3DS");
+function Carro2(marca, precoInicial) {
 
-videoGames.length;
+    const taxa = 1.2;
+    const precoFinal = precoInicial * taxa;
 
+    this.marca = marca;
+    this.preco = precoFinal;
+
+    console.log(this);
+}
+
+const mazda = new Carro2('Mazda', 5000);
+console.log(mazda);
+
+
+/*const Dom = {
+
+    seletor: 'li',
+    element() {
+        return document.querySelector(this.seletor);
+    },
+    ativo() {
+        this.element().classList.add('ativo');
+    }
+
+}*/
+
+/* 
+Dom.ativo(); // adiciona ativo na li
+
+Dom.seletor = 'ul';
+
+Dom.ativo(); // adiciona ativo na ul
 */
 
-for (var numero = 0; numero <= 5; numero++) {
-    console.log(numero);
-}
+// função construtora
 
-var i = 0;
-while (i <= 3) {
-    console.log(i)
-    i++;
-}
+function Dom(seletor) {
+
+    this.element = () => document.querySelector(seletor);
 
 
-var numero = 0;
-var maximo = 50;
-for (; numero <= 50;) {
-    console.log(numero);
-    numero++;
+    this.ativar = classe => this.element().classList.add(classe);
+
 }
+
+const li = new Dom('li');
+const ul = new Dom('ul');
+
+const lastLi = new Dom('li:last-child');
+console.log(lastLi.ativar('ativo'));
+console.log(li.ativar('ativo'));
+console.log(ul.ativar('ativo'));
