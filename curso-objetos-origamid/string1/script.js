@@ -60,3 +60,26 @@ listaPrecos.forEach((preco) => {
 
 console.log(listaPrecos[0].padStart(10, '.')); //......R$ 99
 console.log(listaPrecos[0].padEnd(10, '.')); // R$99......
+
+const ta = 'Ta';
+console.log(ta.repeat(5)); // tatatatata
+
+let listaItens = 'Camisa Nonés Calças Bermudas Vestidos Saias';
+console.log(listaItens = listaItens.replace(/[ ]+/g, ', '));
+
+let preco = 'R$ 1200,43';
+console.log(preco = preco.replace(',', '.'));
+
+const listaItens2 = 'Camisa Nonés Calças Bermudas Vestidos Saias';
+const arrayItens = listaItens2.split(' ');
+console.log(arrayItens);
+
+const htmlText = '<div>O melhor item</div><div>A melhor lista</div>';
+console.log(htmlText);
+const htmlArray = htmlText.split('div');
+console.log(htmlArray);
+
+const htmlNovo = htmlArray.join('section');
+console.log(htmlNovo);
+
+//minuto 7:19
