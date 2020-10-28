@@ -1,56 +1,31 @@
-const ano = 2018;
-const preco = new Number(99);
+// retorne um numero aleatorio entre 1050 e 2000
+const max = 2000;
+const min = 1050;
+console.log(Math.floor(Math.random() * (max - min + 1)) + min);
 
-console.log(Number.isNaN(NaN)); // true
-console.log(Number.isNaN(4 + 5)); // false
+// retorne o maior numero da lista abaixo
+const numeros = '4,5,20,8,9';
+const arrayNumeros = numeros.split(',');
+console.log(Math.max(...arrayNumeros));
 
-console.log(Number.isInteger(20)); //true
-console.log(Number.isInteger(23.6)); //false
 
-console.log(parseFloat('99.50')); // mesma função sem o Number
-console.log(Number.parseFloat('99.5')); // 99.5
-console.log(Number.parseFloat('100 reais')); // 100
-console.log(Number.parseFloat('R$ 100')); //NaN
 
-console.log(parseInt('99.50', 10)); //99
-console.log(parseInt(5.4343435555, 10)); //5
-console.log(Number.parseInt('100 Reais', 10)); //100
+//crie uma função para limpar os preços
+// e retornar os números com centavos arredondados
+// depois retorne a soma total
 
-const preco1 = 2.99;
-console.log(preco1.toString(10)); //'2.99'
-console.log(preco1.toFixed()); //3
+const listaPrecos = ['R$ 59,99', ' R$100,222', 'R$ 230   ', 'r$ 200'];
 
-const carro = 1000.455;
-console.log(carro.toFixed(2)); //1000.46
+function limparPreco(preco) {
 
-const preco2 = 1499.49
-console.log(preco2.toFixed()); //1499
+    preco = +preco.toUpperCase().replace('R$', '').trim().replace(',', '.');
+    preco = +preco.toFixed(2);
+    return preco;
+}
 
-const moeda = 59.49;
-console.log(moeda.toLocaleString('en-US', { style: 'currency', currency: 'USD' })); //$59.49
-console.log(moeda.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })); //R$59,49
+let soma = 0;
+listaPrecos.forEach((item) => {
 
-//////////////objeto Math ///////////////
-
-Math.PI; //3.14159
-Math.E; //2.718
-Math.LN10; //2.303
-console.log(Math.PI, Math.E, Math.LN10);
-console.log(Math.abs(-5.5)); // 5.5
-console.log(Math.ceil(4.8334)); // 5
-console.log(Math.ceil(4.3)); //5
-console.log(Math.floor(4.8334)); // 4
-console.log(Math.floor(4.3)); //4
-console.log(Math.round(4.8334)); //5
-console.log(Math.round(4.3)); //4
-
-console.log(Math.max(5, 3, 10, 42, 2)); //42
-console.log(Math.min(5, 3, 10, 42, 2)); //2
-
-console.log(Math.random()); //0.xxx
-console.log(Math.floor(Math.random() * 100)); // entre 0 e 100
-console.log(Math.floor(Math.random() * 500)); // entre 0 e 500
-
-// numero random entre 72 e 32
-console.log(Math.floor(Math.random() * (72 - 32 + 1)) + 32);
-//console.log(Math.floor(Math.random() * (max - min + 1)) + min);
+    soma += limparPreco(item)
+});
+console.log(soma.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }))
