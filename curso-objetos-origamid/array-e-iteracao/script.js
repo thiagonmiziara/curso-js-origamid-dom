@@ -79,3 +79,71 @@ const maiorValor = numeros1.reduce((anterior, atual) => {
 }, 0);
 
 console.log(maiorValor); // 60
+////////////////////////////////////////////////////////////////
+
+const aulas2 = [{
+        nome: 'HTML 1',
+        min: 15
+    },
+    {
+        nome: 'HTML 2',
+        min: 10
+    },
+    {
+        nome: 'CSS 1',
+        min: 20
+    },
+    {
+        nome: 'JS 1',
+        min: 25
+    },
+]
+
+const listaAulas2 = aulas2.reduce((acumulador, aula, index) => {
+    acumulador[index] = aula.nome;
+    return acumulador;
+}, {});
+
+console.log(listaAulas2);
+
+///////////// [].reduceRight();
+
+const frutas = ['Banana', 'Pêra', 'Uva'];
+
+const frutasRight = frutas.reduceRight((acc, fruta) => acc + ' ' + fruta);
+frutasRight; //"Uva Pêra Banana";
+
+const frutasLeft = frutas.reduce((acc, fruta) => acc + ' ' + fruta);
+frutasLeft; //"Banana Pêra Uva"
+
+
+////////[].some()
+
+const frutas2 = ['Banana', 'Pêra', 'Uva'];
+
+const temUva = frutas2.some((fruta) => {
+    return fruta === 'Uva';
+});
+
+console.log(temUva); //true
+
+function maiorQue100(numero) {
+    return numero > 100;
+}
+const numeros2 = [0, 43, 22, 88, 101, 2];
+const temMaior = numeros2.some(maiorQue100); // true
+
+console.log(temMaior); //true
+
+//////////[].every()
+
+const frutas3 = ['Banana', 'Pêra', 'Uva', ''];
+//false pois pelo menos uma fruta esta vazia ' ', o que é um valor false;
+const arraysCheias = frutas3.every((fruta) => {
+    return fruta;
+});
+console.log(arraysCheias); //false
+
+const number = [6.43, 22, 88, 101, 29];
+const maiorQue3 = number.every(x => x > 3);
+console.log(maiorQue3); // true
