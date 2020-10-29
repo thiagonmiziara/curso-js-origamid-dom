@@ -147,3 +147,52 @@ console.log(arraysCheias); //false
 const number = [6.43, 22, 88, 101, 29];
 const maiorQue3 = number.every(x => x > 3);
 console.log(maiorQue3); // true
+
+///// [].find() e [].findIndex()
+
+const frutas4 = ['Banana', 'Pêra', 'Uva', 'Maçã'];
+const buscaUva = frutas4.findIndex((fruta) => {
+    return fruta === 'Uva';
+}); //2
+console.log(buscaUva); //retorna o index do item = 2
+
+const number2 = [6.43, 22, 88, 101, 29];
+const buscaMaior45 = number2.find(x => x > 45); // 88
+console.log(buscaMaior45); // retorna o primeiro valor maior que 45 que é 88
+
+
+///////[].filter()
+
+const frutas5 = ['Banana', undefined, null, '', 'Uva', 0, 'Maçã'];
+const arrayLimpa = frutas5.filter((fruta) => {
+    return fruta;
+});
+console.log(arrayLimpa); //["Banana", "Uva", "Maçã"];
+
+const number3 = [6.43, 22, 88, 101, 29];
+const buscaMaior44 = number3.filter(x => x > 43);
+console.log(buscaMaior44); //[88, 101];
+
+
+const aulas3 = [{
+        nome: 'HTML 1',
+        min: 15
+    },
+    {
+        nome: 'HTML 2',
+        min: 10
+    },
+    {
+        nome: 'CSS 1',
+        min: 20
+    },
+    {
+        nome: 'JS 1',
+        min: 25
+    },
+]
+
+const maior15 = aulas3.filter((aula) => {
+    return aula.min >= 15
+});
+console.log(maior15);
