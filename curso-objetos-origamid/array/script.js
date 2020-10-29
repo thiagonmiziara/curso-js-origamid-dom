@@ -69,3 +69,72 @@ const ultimoCarro = cars.pop();
 cars; //["Kia", "Ford", "Fiat", "VW"]
 
 cars.reverse(); //["VW", "Fiat", "Ford", "Kia"]
+
+////// .splice()
+cars.splice(1, 0, 'Kia', 'Mustang'); //[]
+cars; //["VW", "Kia", "Mustang", "Fiat", "Ford", "Kia"]
+
+cars.splice(3, 2, 'Ferrari'); // removeu fiat e ford
+cars; //["VW", "Kia", "Mustang", "Ferrari", "Kia"]
+
+
+//// [].copyWithin(alvo,inicio,final);
+
+['Iten1', 'Iten2', 'Iten3', 'Iten4'].copyWithin(2, 0, 3);
+//['Iten1', 'Iten2','Iten1','Iten2']
+
+['Iten1', 'Iten2', 'Iten3', 'Iten4'].copyWithin(-1);
+//['Iten1', 'Iten2','Iten3','Iten1']
+
+///////[].fill(valor,inicio,final);
+['Iten1', 'Iten2', 'Iten3', 'Iten4'].fill('Banana');
+//["Banana", "Banana", "Banana", "Banana"]
+
+['Iten1', 'Iten2', 'Iten3', 'Iten4'].fill('Banana', 2);
+//["Iten1", "Iten2", "Banana", "Banana"]
+
+['Iten1', 'Iten2', 'Iten3', 'Iten4'].fill('Banana', 1, 3);
+//["Iten1", "Banana", "Banana", "Iten4"]
+
+
+// Métodos de Acesso[].concat()
+
+const transporte1 = ['Barco', 'Avião'];
+const transporte2 = ['Carro', 'Moto'];
+const transportes = transporte1.concat(transporte2);
+console.log(transportes); //["Barco", "Avião", "Carro", "Moto"]
+
+const maisTransportes = [].concat(transporte1, transporte2, 'Van');
+console.log(maisTransportes); // ["Barco", "Avião", "Carro", "Moto", "Van"]
+
+////// [].includes() , []indexOf() e [].lastIndexOf()
+
+const linguagens = ['Html', 'Css', 'Js', 'Php', 'Python', 'Js'];
+
+linguagens.includes('Css'); //true
+linguagens.includes('ruby'); //false
+linguagens.indexOf('Python'); //4
+linguagens.indexOf('Js'); //2
+linguagens.lastIndexOf('Js'); //5
+
+//// [].join()
+
+linguagens.join(); //"Html,Css,Js,Php,Python,Js"
+linguagens.join(' '); //"Html Css Js Php Python Js"
+linguagens.join('-_-'); //"Html-_-Css-_-Js-_-Php-_-Python-_-Js"
+
+let htmlString = '<h2>Titulo Principal</h2>';
+
+htmlString = htmlString.split('h2');
+//["<", ">Titulo Principal</", ">"]
+
+htmlString = htmlString.join('h1');
+//"<h1>Titulo Principal</h1>"
+
+//////// [].slice(inicio,final);
+
+linguagens.slice(3); //["Php", "Python", "Js"]
+linguagens.slice(1, 4); //"Css", "Js", "Php"]
+
+const cloneLinguagens = linguagens.slice();
+//["Html", "Css", "Js", "Php", "Python", "Js"]
