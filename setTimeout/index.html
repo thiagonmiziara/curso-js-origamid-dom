@@ -8,8 +8,41 @@
 </head>
 
 <body>
-    <button>button</button>
-    <script src="setTimeout.js"></script>
+    <style>
+        body {
+            background: rgb(96, 96, 209);
+        }
+        
+        body.active {
+            background: rgb(185, 185, 185);
+        }
+        
+        h1 {
+            text-align: center;
+            color: chocolate;
+        }
+        
+        button {
+            color: white;
+            font-size: 1rem;
+            background: black;
+            width: 20%;
+            height: 30%;
+            margin: 1rem;
+        }
+        
+        span {
+            font-size: 2rem;
+            color: chocolate;
+            font-weight: bold;
+        }
+    </style>
+    <h1>Cronômetro</h1>
+    <button class="iniciar">Iniciar</button>
+    <button class="pausar">Pausar</button>
+    <span class="tempo"></span>
+
+    <script src="script.js"></script>
 </body>
 
 </html>
