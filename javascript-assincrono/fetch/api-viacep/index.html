@@ -9,12 +9,31 @@
 </head>
 
 <body>
-    <form id="buscaCep">
-        <label for="cep"></label>
-        <input type="text" name="cep" id="cep">
-        <input type="button" value="Buscar Cep" id="btnCep">
-    </form>
-    <div class="resultadoCep"></div>
+    <header>
+        <h1>Busca Cep</h1>
+    </header>
+    <div class="container">
+
+        <form id="buscaCep">
+            <label for="cep">Cep:
+                <input type="text" name="cep" id="cep" placeholder="Digite um cep">
+                <input type="button" value="Buscar Cep" id="btnCep">
+            </label>
+
+            <label for="rua">Rua:
+            <input type="text" name="rua" size="60" id="rua"></label>
+
+            <label for="bairro">Bairro:
+            <input type="text" name="bairro" id="bairro"></label>
+
+            <label for="cidade">Cidade:
+            <input type="text" name="cidade" id="cidade">
+            <label for="uf">Uf:
+            <input type="text" name="uf" id="uf"></label>
+            </label>
+        </form>
+    </div>
+
 
     <script src="script.js"></script>
 </body>

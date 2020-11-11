@@ -1,7 +1,78 @@
-label {
-    display: block;
-}
-
-input {
-    display: block;
-}
+    body {
+        background: rgb(190, 190, 190);
+    }
+    
+    h1 {
+        font-size: 4rem;
+        font-family: 'IBM Plex Mono', monospace;
+        text-align: center;
+    }
+    
+    .container {
+        width: 40%;
+        height: 20vh;
+        display: flex;
+        background: #ccc;
+        box-sizing: border-box;
+        box-shadow: 3px 3px 3px 3px rgb(139, 139, 139);
+        justify-content: center;
+        margin: 0 auto;
+    }
+    
+    label {
+        font-size: 2rem;
+        font-family: 'IBM Plex Mono', monospace;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+    }
+    
+    #cep,
+    #bairro,
+    #cidade {
+        display: inline-block;
+        width: 25%;
+        height: 5%;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 700;
+        font-family: 'IBM Plex Mono', monospace;
+        align-items: center;
+        margin: 0.5rem;
+        border: 0;
+    }
+    
+    #btnCep {
+        width: 25%;
+        height: 7%;
+        font-family: 'IBM Plex Mono', monospace;
+        font-weight: 700;
+        text-align: center;
+        background: rgb(88, 95, 95);
+        box-shadow: 2px 2px 2px rgb(100, 189, 189);
+        border: 0;
+        color: white;
+        font-size: 1rem;
+    }
+    
+    #rua {
+        display: inline-block;
+        width: 50%;
+        height: 7%;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 700;
+        font-family: 'IBM Plex Mono', monospace;
+        align-items: center;
+        border: 0;
+    }
+    
+    #uf {
+        font-family: 'IBM Plex Mono', monospace;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 700;
+        width: 11%;
+        border: 0;
+        align-items: center;
+    }
