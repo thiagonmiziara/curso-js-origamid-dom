@@ -10,6 +10,7 @@ btnCep.addEventListener('click', handleClick);
 function handleClick(event) {
     event.preventDefault();
     const cep = inputCep.value;
+
     buscaCep(cep);
 }
 
