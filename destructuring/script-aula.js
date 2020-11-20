@@ -48,6 +48,9 @@ const pessoaChata = {
 const { nome: nomeGabi, idade, email = "email@gmail.com" } = pessoaChata;
 console.log(`${nomeGabi} tem ${idade} anos e tem um email com esse endereço ${email}`);
 
+
+
+
 ////////////// destructuring Arrays /////////////
 const frutas = ['Banana', 'Uva', 'Morango'];
 //ex antigo 

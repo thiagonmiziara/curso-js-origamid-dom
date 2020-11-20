@@ -23,3 +23,12 @@ const cachorro = {
 
 const { cor: bobCor } = cachorro;
 console.log(bobCor);
+
+const pessoa1 = {
+    nome: 'Thiago',
+    idade: 33,
+    email: 'thiagonmiziara@gmail.com'
+}
+
+const { nome, idade, email = "email@hotmail.com" } = pessoa1;
+console.log(`${nome} tem ${idade} anos e possui o seguinte email para contato ${email}`);
