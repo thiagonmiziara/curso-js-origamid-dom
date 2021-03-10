@@ -13,7 +13,7 @@ function Pessoa(nome, idade) {
 const thiago = new Pessoa('thiago', 33);
 const bell = new Pessoa('Bell', 46);
 const gabriella = new Pessoa('Gabriella', 13);
-console.log(thiago, bell, gabriella)
+console.log(thiago, bell.andou(), gabriella.andou());
 
 /////////////////////////////////////////////////////////////////////////////
 
